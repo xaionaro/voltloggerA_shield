@@ -7224,8 +7224,6 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <part name="IC2" library="analog-devices" deviceset="AD623" device="R"/>
 <part name="IC3" library="analog-devices" deviceset="AD623" device="R"/>
 <part name="U$1" library="adafruit" deviceset="ARDUINO" device="UNO"/>
-<part name="R6" library="resistor" deviceset="R-EU_" device="0207/10"/>
-<part name="R7" library="resistor" deviceset="R-EU_" device="0207/10"/>
 <part name="S2" library="switch" deviceset="RDT1034" device=""/>
 <part name="S1" library="switch" deviceset="50-3POLE30" device=""/>
 <part name="R8" library="resistor" deviceset="R-EU_" device="0207/10"/>
@@ -7272,7 +7270,6 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <sheets>
 <sheet>
 <plain>
-<text x="-111.76" y="-27.94" size="1.778" layer="91">2.5V</text>
 </plain>
 <instances>
 <instance part="LED1" gate="G$1" x="-68.58" y="78.74" rot="R180"/>
@@ -7281,8 +7278,6 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <instance part="IC2" gate="G$1" x="-60.96" y="-63.5"/>
 <instance part="IC3" gate="G$1" x="-60.96" y="-109.22"/>
 <instance part="U$1" gate="G$1" x="-86.36" y="40.64"/>
-<instance part="R6" gate="G$1" x="-101.6" y="-20.32"/>
-<instance part="R7" gate="G$1" x="-101.6" y="-35.56"/>
 <instance part="S2" gate="G$1" x="-88.9" y="-7.62"/>
 <instance part="S1" gate="G$1" x="-114.3" y="-73.66"/>
 <instance part="R8" gate="G$1" x="-134.62" y="-91.44" rot="R270"/>
@@ -7329,24 +7324,13 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <busses>
 </busses>
 <nets>
-<net name="N$3" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="-20.32" x2="-111.76" y2="-27.94" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="-111.76" y1="-27.94" x2="-106.68" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="-111.76" y="-27.94"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="RG@1"/>
-<wire x1="-68.58" y1="-20.32" x2="-76.2" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-20.32" x2="-101.6" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="-101.6" y1="-45.72" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="-45.72" x2="-127" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="S1" gate="G$1" pin="A"/>
 <wire x1="-127" y1="-50.8" x2="-127" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="RG@1"/>
+<wire x1="-127" y1="-50.8" x2="-96.52" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="-20.32" x2="-68.58" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -7666,8 +7650,6 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <wire x1="-76.2" y1="-119.38" x2="-68.58" y2="-119.38" width="0.1524" layer="91"/>
 <junction x="-76.2" y="-35.56"/>
 <junction x="-76.2" y="-73.66"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="-96.52" y1="-35.56" x2="-76.2" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="REF"/>
 <wire x1="-55.88" y1="-35.56" x2="-55.88" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="-43.18" x2="-60.96" y2="-43.18" width="0.1524" layer="91"/>
@@ -7731,8 +7713,10 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <pinref part="R21" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="81.28" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="81.28" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="81.28" x2="17.78" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="81.28" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="81.28" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="81.28" x2="17.78" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="81.28" x2="-50.8" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="81.28" x2="-60.96" y2="91.44" width="0.1524" layer="91"/>
 <junction x="78.74" y="81.28"/>
@@ -7750,20 +7734,30 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <pinref part="L1" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="99.06" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
 <junction x="66.04" y="81.28"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="40.64" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="40.64" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
+<junction x="78.74" y="40.64"/>
+<junction x="30.48" y="81.28"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R22" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="60.96" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
+<junction x="78.74" y="60.96"/>
+<junction x="50.8" y="81.28"/>
 </segment>
 </net>
 <net name="V+" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="5V"/>
-<junction x="-78.74" y="-20.32"/>
-<wire x1="-78.74" y1="-20.32" x2="-78.74" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-7.62" x2="-78.74" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="-45.72" x2="-78.74" y2="-91.44" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="7.62" x2="-78.74" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="2.54" x2="-78.74" y2="0" width="0.1524" layer="91"/>
 <wire x1="-78.74" y1="0" x2="-78.74" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="-7.62" x2="-78.74" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="-20.32" x2="-96.52" y2="-20.32" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="-78.74" y1="-91.44" x2="-60.96" y2="-91.44" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="+V"/>
 <wire x1="-60.96" y1="-91.44" x2="-60.96" y2="-93.98" width="0.1524" layer="91"/>
@@ -7785,26 +7779,6 @@ Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
 <wire x1="96.52" y1="165.1" x2="91.44" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="170.18" x2="-30.48" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="170.18" x2="-116.84" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$37" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="R22" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="60.96" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
-<junction x="78.74" y="60.96"/>
-</segment>
-</net>
-<net name="N$39" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="R23" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="40.64" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="40.64" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
-<junction x="78.74" y="40.64"/>
 </segment>
 </net>
 <net name="N$41" class="0">
